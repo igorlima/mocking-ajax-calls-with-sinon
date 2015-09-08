@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "dependencies": {
+    "express": "~3.4.7",
+    "bower": "~1.5.2",
+    "wiredep": "~2.2.2"
+  },
+  "engines": {
+    "node": ">=0.10.25"
+  },
+  "scripts": {
+    "bower": "./node_modules/bower/bin/bower install",
+    "wiredep": "./node_modules/wiredep/wiredep-cli.js --src index.html",
+    "wiredep-dev": "./node_modules/wiredep/wiredep-cli.js --src index.html --devDependencies",
+    "sinon": "./bower_components/sinon/build",
+
+
+    "mock-apis": "npm run bower && npm run sinon && npm run wiredep-dev",
+    "postinstall": "npm run bower && npm run wiredep"
+  }
+}
