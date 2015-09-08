@@ -15,7 +15,7 @@
     "sinon": "./bower_components/sinon/build",
 
 
-    "mock-apis": "npm run bower && npm run sinon && npm run wiredep-dev",
+    "mock-apis": "npm install && npm run sinon && npm run wiredep-dev",
     "postinstall": "npm run bower && npm run wiredep"
   }
 }
